@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de compromissos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agenda de compromissos</h1>
+    <button id="toggleTema">Alternar Tema</button>
+
+    <div id="calendario" class="calendario"></div>
+
+    <div id="modal" class="modal">
+        <h3 id="modalTitulo"></h3>
+        <ul id="listaTarefas"></ul>
+        <input type="text" id="novaTarefa" placeholder="Nova Tarefa">
+        <button id="adicionarTarefa">Adicionar</button>
+        <button id="fecharModal">Fechar</button>
+    </div>
+
+    <button id="limparDados">Limpar Dados</button>
+    <script src="agenda.js"></script>
+</body>
+</html>

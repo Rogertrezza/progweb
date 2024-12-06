@@ -1,0 +1,111 @@
+/* Tema Claro (Padrão) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 120px);
+    gap: 5px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.dia {
+    border: 1px solid #ccc;
+    padding: 30px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    position: relative;
+    text-align: center;
+}
+
+.dia:hover {
+    background-color: #e0e0e0;
+}
+
+.dia.comTarefa {
+    background-color: #d1e7dd;
+}
+
+.contador-tarefas {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    background: #007bff;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.modal {
+    display: none; /* Modal oculto por padrão */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Garante que o modal fique acima de outros elementos */
+}
+
+.modal.active {
+    display: block; /* Exibe o modal quando a classe 'active' está presente */
+}
+
+#novaTarefa {
+    width: 80%; /* Define a largura do campo de entrada */
+    padding: 10px; /* Adiciona mais espaço interno */
+    font-size: 1rem; /* Aumenta o tamanho da fonte */
+    border: 1px solid #ccc; /* Define a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento inferior para separar dos botões */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* Tema Escuro */
+body.tema-escuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.tema-escuro .dia {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+}
+
+body.tema-escuro .dia:hover {
+    background-color: #333333;
+}
+
+body.tema-escuro .dia.comTarefa {
+    background-color: #3a6351;
+}
+
+body.tema-escuro .modal {
+    background: #1e1e1e; /* Cor de fundo para o tema escuro */
+    color: #ffffff;
+    border: 2px solid #444444;
+}
